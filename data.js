@@ -35,7 +35,7 @@ const Bulbasaur2=new Pokemon(
     'Bulbasaur2',
     'Planta',
     1000,
-    [new Planta('Bombasemilla',55),new Planta('Tacelo',25)]
+    [new Planta('Bombasemilla',55),new Planta('Tacleo',25)]
 )
 const Squirtle2=new Pokemon(
     'Squirtle2',

@@ -1,4 +1,3 @@
-
 //Pokemon
 export class Pokemon{
     constructor(name,type,hp,skills){
@@ -6,6 +5,7 @@ export class Pokemon{
         this.type=type
         this.hp=hp
         this.skills=skills
+        this.skillElegida=this.skills[0].skillname
         
     }
 
@@ -27,8 +27,10 @@ export class Batalla{
         this.team1=team1
         this.team2=team2
     }
-    lucha(arrayAtacanteAtacado){
-        console.log(arrayAtacanteAtacado)
+    lucha(atacante,atacado){
+        let poderAtacante=atacante.skills[0].power
+        let poderRealAtacante=
+        console.log(`${atacante.name} atacó a ${atacado.name} con ${atacante.skillElegida}`)
         
 
 
@@ -69,6 +71,5 @@ export class Planta extends Elemento{
     }
     calcularPoder(){}
 }
-
 
 
