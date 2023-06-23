@@ -10,7 +10,7 @@ const render=()=>{
     const spaceButton=document.getElementById('space')
     ui.mostrarPokemones(team1,team2)
     ui.mostrarAtaques(team1,team2)
-    ui.elegirAtaque(team1,team2)
+    // ui.elegirAtaque(team1,team2)
     
 
 

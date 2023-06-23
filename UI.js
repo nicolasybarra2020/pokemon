@@ -107,6 +107,12 @@ export class UI{
                             <div class='skill'>${team[i].skills[0].skillname}(${team[i].skills[0].power})</div>
                             <div class='skill'>${team[i].skills[1].skillname}(${team[i].skills[1].power})</div>                        
                             `;
+                            this.elegirAtaque(team,div,i)
+                            if(this.ronda%2===0){
+                                this.elegido2=team[i]
+                            }else{
+                                this.elegido1=team[i]
+                            }
 
                 // }
                 
@@ -114,19 +120,20 @@ export class UI{
         }
     }
 
-    elegirAtaque(team1,team2){
-        const team1divs=this.team1div.children
-        const team2divs=this.team2div.children
-        let team=team1
+    elegirAtaque(team,mydiv,index){
+        // const team1divs=this.team1div.children
+        // const team2divs=this.team2div.children
+        // let team=team1
     
-        for(let i=0;i<3;i++){
-            let div=team1divs[i]
-            if(this.ronda%2===0){
-                div=team2divs[i]
-                team=team2
-            }
-            const handleClick=()=>{
-              
+        // for(let i=0;i<3;i++){
+        //     let div=team1divs[i]
+        //     if(this.ronda%2===0){
+        //         div=team2divs[i]
+        //         team=team2
+        //     }
+        let i=index
+        let div=mydiv
+            const handleClick=(div)=>{
                 const divHijos = div.getElementsByClassName('skill');
                 for (let j = 0; j < 2; j++) {
                     const divHijo = divHijos[j];
@@ -141,11 +148,12 @@ export class UI{
                 }
                 div.removeEventListener('click',handleClick)
             }
-                    div.addEventListener('click',handleClick)
+            return handleClick(div)
+        //             div.addEventListener('click',handleClick)
                 
 
         
-        }
+        // }
         
 
     }
