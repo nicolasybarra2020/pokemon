@@ -1,4 +1,5 @@
 import { batalla } from "./data.js"
+import { team1,team2 } from "./data.js"
 
 export class UI{
     
@@ -49,6 +50,7 @@ export class UI{
                         this.elegido1=team1[i]
                         console.log(this.elegido1)
                         turno=(!(this.ronda%2==0))?2:0
+                        
                     }
                 })
                 
@@ -60,7 +62,6 @@ export class UI{
                         this.elegido2=team2[i]
                         console.log(this.elegido2)
                         turno=(this.ronda%2==0)?1:0
-
                         
                     }
                     
@@ -103,8 +104,8 @@ export class UI{
                 // if(!clicked){
                     // clicked=true
                     div.innerHTML=`
-                            <div class='skill'>${team[i].skills[0].skillname}</div>
-                            <div class='skill'>${team[i].skills[1].skillname}</div>                        
+                            <div class='skill'>${team[i].skills[0].skillname}(${team[i].skills[0].power})</div>
+                            <div class='skill'>${team[i].skills[1].skillname}(${team[i].skills[1].power})</div>                        
                             `;
 
                 // }
@@ -117,7 +118,7 @@ export class UI{
         const team1divs=this.team1div.children
         const team2divs=this.team2div.children
         let team=team1
-        
+    
         for(let i=0;i<3;i++){
             let div=team1divs[i]
             if(this.ronda%2===0){
@@ -125,7 +126,7 @@ export class UI{
                 team=team2
             }
             const handleClick=()=>{
-
+              
                 const divHijos = div.getElementsByClassName('skill');
                 for (let j = 0; j < 2; j++) {
                     const divHijo = divHijos[j];
@@ -135,7 +136,7 @@ export class UI{
                     } else if (j === 1) {
                         team[i].skillElegida = team[i].skills[1].skillname;
                     }
-                    console.log(team [i].skillElegida );
+                    console.log(`Elegiste el ataque ${team [i].skillElegida}!`);
                     });
                 }
                 div.removeEventListener('click',handleClick)

@@ -9,19 +9,19 @@ const charmander1=new Pokemon(
     'Charmander1',
     'Fuego',
     900,
-    [new Fuego('Lanzallamas',70),new Fuego('Embestida',20)]
+    [new Fuego('Lanzallamas',370),new Fuego('Embestida',200)]
 ) 
 const Bulbasaur1=new Pokemon(
     'Bulbasaur1',
     'Planta',
     1000,
-    [new Planta('Tacleo',25),new Planta('Bombaverde',60)]
+    [new Planta('Tacleo',250),new Planta('Bombaverde',360)]
 )
 const Squirtle1=new Pokemon(
     'Squirtle1',
     'Agua',
     950,
-    [new Agua('Waterpulse',70),new Agua('Aquatail',50)]
+    [new Agua('Waterpulse',170),new Agua('Aquatail',300)]
 )
 
 
@@ -29,19 +29,19 @@ const charmander2=new Pokemon(
     'Charmander2',
     'Fuego',
     900,
-    [new Fuego('Embestida',20),new Fuego('Frustracion',65)]
+    [new Fuego('Embestida',200),new Fuego('Frustracion',165)]
 ) 
 const Bulbasaur2=new Pokemon(
     'Bulbasaur2',
     'Planta',
     1000,
-    [new Planta('Bombasemilla',55),new Planta('Tacleo',25)]
+    [new Planta('Bombasemilla',505),new Planta('Tacleo',250)]
 )
 const Squirtle2=new Pokemon(
     'Squirtle2',
     'Agua',
     950,
-    [new Agua('Aquajet',45),new Agua('Waterpulse',70)]
+    [new Agua('Aquajet',240),new Agua('Waterpulse',170)]
 )
 
 
